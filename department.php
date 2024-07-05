@@ -20,23 +20,6 @@
         .w3-main {
             margin-left: 250px; /* Adjust margin for sidebar width */
         }
-        .w3-banner-img {
-            width: 100%;
-            height: auto;
-            position: relative; /* Ensure container is relative for absolute positioning */
-        }
-        .w3-banner-text {
-            position: absolute;
-            top: 10%; /* Adjust as needed */
-            left: 50%;
-            transform: translateX(-50%);
-            text-align: center;
-            color: #fff; /* Text color */
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Optional: Text shadow for better readability */
-            z-index: 1; /* Ensure text is above image */
-            width: 100%; /* Ensure text spans full width */
-            box-sizing: border-box; /* Ensure padding is included in width calculation */
-        }
         .w3-content-container {
             padding: 20px;
             font-size: 20px;
@@ -60,12 +43,12 @@
             <h4>Salary Management System</h4>
             <div class="w3-bar-block">
                 <dl>
-                    <dt><a href="home.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white w3-red">Home</a></dt>
+                    <dt><a href="home.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a></dt>
                     <dt><a href="department.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Department</a></dt>
                     <dt><a href="employee.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Employee</a></dt>
-                    <dt><a href="employee-setsalary.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Set Salary</a></dt>
+                    <dt><a href="setsalarypage.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Set Salary</a></dt>
                     <dt><a href="employee-payment.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Set Payment</a></dt>
-                    <dt><a href="employee-payslip.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Pay Slip</a></dt>
+                    <dt><a href="payslippage.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Pay Slip</a></dt>
                     <dt><a href="employee-payhistory.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Payment History</a></dt>
                     <dt><a href="index.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Log Out</a></dt>
                 </dl>
@@ -75,34 +58,32 @@
 
     <!-- Page content -->
     <div class="w3-main" style="margin-left:250px;"> <!-- Adjust margin to match sidebar width -->
-        <!-- Title Above Banner Image -->
-        <div class="w3-banner-text">
-            <h1 class="w3-title">Welcome to</h1>
-            <h1>Salary Management System</h1>
-        </div>
-
-        <!-- Banner Image -->
-        <div class="w3-display-container">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMAXyKYESlcAMCFjstOLyNWGUlAIka2KVwPHBRpIgmCkdf2F4pvSU4qT-JU1M7f-E2S1s&usqp=CAU" alt="Banner Image" class="w3-banner-img">
-        </div>
-
-        <!-- Content -->
+        <!-- Header -->
         <div class="w3-content-container">
-            <h2>Additional Content</h2>
-            <p>You can add more content here as needed.</p>add
-            <center><h3>This is the homepage</h3></center>
+            <div class="w3-display-container w3-text-blue" style="font-size: 50px">
+                <img src="images/banner.jpeg" alt="Lights" style="height: 100px; width: 100%; object-fit: cover">
+                <div class="w3-display-middle w3-large">
+                    <h1>Payroll Management system</h1>
+                </div>
+            </div>
+            <div class="w3-display-container w3-text-white">
+                <img src="home.jpg" alt="Lights" style="width: 100%">
+                <div class="w3-display-topmiddle" style="font-size: 20px">
+                    <p><br><br><br><h2><center>Welcome to payroll system</center></h2></p>
+                    <br><center><h3>This is the homepage</h3></center>
+                </div>
+            </div>
         </div>
     </div>
 
     <!-- Optional: JavaScript for sidebar toggle -->
     <script>
-    function w3_open() {
-        document.getElementById("mySidebar").style.display = "block";
-    }
-    function w3_close() {
-        document.getElementById("mySidebar").style.display = "none";
-    }
-</script>
-
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+        }
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+    </script>
 </body>
 </html>
