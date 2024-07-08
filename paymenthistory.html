@@ -6,7 +6,7 @@
     <title>Payment History</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> <!-- W3.CSS for styling -->
     <style>
-        /* Custom CSS styles */
+       
         body {
             font-family: Arial, sans-serif;
             background-color: #f2f2f2;
@@ -24,7 +24,7 @@
         h1 {
             text-align: center;
             margin-bottom: 20px;
-            color: #1565c0; /* Blue color */
+            color: #1565c0;
         }
         .w3-input {
             width: 100%;
@@ -88,17 +88,17 @@
                 </tr>
             </thead>
             <tbody id="paymentHistoryTableBody">
-                <!-- Payment history rows will be dynamically added here -->
+                
             </tbody>
         </table>
     </div>
 
     <script>
-        // Function to fetch and display payment history
+        
         function fetchPaymentHistory() {
             var employeeId = document.querySelector('input[name="id"]').value;
 
-            // Make a POST request to the PHP script
+           
             fetch('employee-payhistoryshow.php', {
                 method: 'POST',
                 headers: {
@@ -108,7 +108,7 @@
             })
             .then(response => response.text())
             .then(data => {
-                // Display the fetched HTML in the table body
+               
                 document.getElementById('paymentHistoryTableBody').innerHTML = data;
             })
             .catch(error => {
@@ -116,7 +116,7 @@
             });
         }
 
-        // Prevent form submission and handle fetch manually
+       
         document.querySelector('form').addEventListener('submit', function(event) {
             event.preventDefault();
             fetchPaymentHistory();

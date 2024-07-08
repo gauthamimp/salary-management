@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payslip</title>
     <style>
-        /* CSS Styles */
+        
         body {
             font-family: Arial, sans-serif;
             background-color: #f2f2f2;
@@ -66,13 +66,13 @@
                 </tr>
             </thead>
             <tbody id="payslipTableBody">
-                <!-- Payslip rows will be dynamically added here -->
+               
             </tbody>
         </table>
     </div>
 
     <script>
-        // Function to fetch payslip data based on employee ID
+       
         function fetchPayslipData(employeeId) {
             fetch('employee-payhistoryshow.php', {
                 method: 'POST',
@@ -84,7 +84,7 @@
             .then(response => response.json())
             .then(data => {
                 if (data.length > 0) {
-                    const payslipData = data[0]; // Assuming only one payslip is returned for simplicity
+                    const payslipData = data[0]; 
                     displayPayslip(payslipData);
                 } else {
                     alert('No payslip found for the given Employee ID.');
@@ -95,7 +95,7 @@
             });
         }
 
-        // Function to display payslip details in the table
+       
         function displayPayslip(payslipData) {
             var tableBody = document.getElementById('payslipTableBody');
             var row = tableBody.insertRow();
@@ -108,7 +108,7 @@
             `;
         }
 
-        // Event listener for form submission
+       
         document.getElementById('employeeForm').addEventListener('submit', function(event) {
             event.preventDefault();
             var employeeId = document.getElementById('employeeIdInput').value;

@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employee Management - Salary Management</title>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> <!-- W3.CSS for styling -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
     <style>
-        /* Custom styles */
+       
         body {
             font-family: Arial, sans-serif;
             background-color: #f2f2f2;
@@ -15,11 +15,11 @@
         }
         .w3-content-container {
             padding: 20px;
-            background-color: #fff; /* White background */
+            background-color: #fff;
             border-radius: 10px;
             margin: 20px auto;
-            max-width: 1200px; /* Adjust as needed */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for container */
+            max-width: 1200px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
         }
         .w3-title {
             font-size: 30px;
@@ -30,29 +30,29 @@
         .w3-table-all {
             width: 100%;
             margin-top: 20px;
-            overflow-x: auto; /* Enable horizontal scroll if needed */
-            table-layout: fixed; /* Fixed table layout */
-            border-collapse: collapse; /* Collapse table borders */
-            text-align: left; /* Align text to the left within cells */
+            overflow-x: auto; 
+            table-layout: fixed;
+            border-collapse: collapse; 
+            text-align: left; 
         }
         .w3-table-all th, .w3-table-all td {
-            padding: 10px; /* Adjust cell padding */
-            border: 1px solid #ddd; /* Add borders to cells */
-            word-wrap: break-word; /* Allow long words to break */
+            padding: 10px; 
+            border: 1px solid #ddd;
+            word-wrap: break-word;
         }
         .w3-table-all th:first-child,
         .w3-table-all td:first-child {
-            min-width: 50px; /* Minimum width for Employee ID column */
+            min-width: 50px;
         }
-        .w3-table-all td:nth-child(3), /* Date of Birth */
-        .w3-table-all td:nth-child(6), /* Joining Date */
-        .w3-table-all td:nth-child(7) { /* Phone */
-            min-width: 120px; /* Adjust width as needed */
+        .w3-table-all td:nth-child(3),
+        .w3-table-all td:nth-child(6),
+        .w3-table-all td:nth-child(7) {
+            min-width: 120px; 
         }
         .w3-table-all th:last-child,
         .w3-table-all td:last-child {
-            min-width: 100px; /* Minimum width for Action column */
-            max-width: 150px; /* Maximum width for Action column */
+            min-width: 100px; 
+            max-width: 150px;
         }
         .add-employee-button {
             float: right;
@@ -67,13 +67,13 @@
     <div class="w3-content-container">
         <h2 class="w3-title">Employee Data</h2>
 
-        <!-- Button to open employee selection dropdown -->
+        
         <button class="w3-button w3-blue add-employee-button" onclick="toggleEmployeeDropdown()">Add Employee</button>
 
-        <!-- Dropdown menu for employee selection -->
+        
         <div id="employeeDropdown" class="w3-dropdown-content w3-bar-block w3-card-4" style="display: none;">
             <button onclick="closeDropdown()" class="w3-bar-item w3-button w3-hover-light-grey">Close</button>
-            <!-- Add employees dynamically here -->
+           
             <button class="w3-bar-item w3-button w3-hover-light-grey" onclick="addEmployeeToTable('Emily Johnson', '1992-08-20', 'emilyjohnson@example.com', 'Female', '2022-01-05', '555-123-4567', '789 Street, Some City, USA', 'HR', 'HR', '555123456', 'HR Manager')">Emily Johnson</button>
             <button class="w3-bar-item w3-button w3-hover-light-grey" onclick="addEmployeeToTable('Michael Brown', '1988-04-12', 'michaelbrown@example.com', 'Male', '2021-11-15', '444-987-6543', '321 Avenue, Other Town, USA', 'Sales', 'Sales', '444987654', 'Sales Executive')">Michael Brown</button>
             <button class="w3-bar-item w3-button w3-hover-light-grey" onclick="addEmployeeToTable('Sarah Williams', '1993-10-30', 'sarahwilliams@example.com', 'Female', '2022-02-20', '333-456-7890', '456 Street, Another City, USA', 'Operations', 'Operations', '333456789', 'Operations Manager')">Sarah Williams</button>
@@ -100,7 +100,7 @@
                 </tr>
             </thead>
             <tbody id="employeeTableBody">
-                <!-- Sample rows (replace with dynamic content) -->
+               
                 <tr id="employee-row-1">
                     <td>123</td>
                     <td>John Doe</td>
@@ -131,13 +131,13 @@
                     <td>Engineer</td>
                     <td><button class="w3-button w3-red" onclick="deleteEmployee(2)">Delete</button></td>
                 </tr>
-                <!-- Add more rows as needed -->
+               
             </tbody>
         </table>
     </div>
 
     <script>
-        let lastEmployeeId = 2; // Set initial last employee ID
+        let lastEmployeeId = 2; 
 
         function toggleEmployeeDropdown() {
             var dropdown = document.getElementById('employeeDropdown');
@@ -149,10 +149,10 @@
         }
 
         function addEmployeeToTable(name, dob, email, gender, sdate, phone, address, depname, managedepid, bacc, jobtitle) {
-            // Increment the employee ID
+            
             lastEmployeeId++;
 
-            // Add employee to the table
+           
             var tableBody = document.getElementById('employeeTableBody');
             var newRow = document.createElement('tr');
             newRow.setAttribute('id', 'employee-row-' + lastEmployeeId);
@@ -173,7 +173,7 @@
             `;
             tableBody.appendChild(newRow);
 
-            // Remove employee from dropdown
+            
             var dropdownButton = document.querySelector('#employeeDropdown button[data-name="' + name + '"]');
             if (dropdownButton) {
                 dropdownButton.parentNode.removeChild(dropdownButton);

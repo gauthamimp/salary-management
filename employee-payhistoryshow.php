@@ -2,39 +2,37 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-// Database credentials
+
 $servername = "localhost";
 $username = "root";
-$password = "Gauthu@2004"; // Assuming empty password
-$dbname = "payment_history"; // Replace with your actual database name
-
-// Check if ID parameter is set and not empty
+$password = "Gauthu@2004"; 
+$dbname = "payment_history"; 
 if (isset($_POST['id']) && !empty($_POST['id'])) {
-    // Create connection
+    
     $conn = new mysqli($servername, $username, $password, $dbname);
 
-    // Check connection
+    
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    // Function to sanitize input
+   
     function sanitize($conn, $input) {
         return mysqli_real_escape_string($conn, $input);
     }
 
-    // Sanitize the input to prevent SQL injection
+    
     $employeeId = sanitize($conn, $_POST['id']);
 
-    // Prepare SQL query to fetch payment history
+    
     $sql = "SELECT payslip_number, employee_id, employee_name, account_number, total_salary FROM payment_history WHERE employee_id = $employeeId";
 
-    // Execute SQL query
+    
     $result = $conn->query($sql);
 
     if ($result) {
         if ($result->num_rows > 0) {
-            // Output data of each row
+           
             echo "<table>";
             echo "<thead><tr><th>Payslip Number</th><th>Employee ID</th><th>Employee Name</th><th>Account Number</th><th>Total Salary</th></tr></thead>";
             echo "<tbody>";
@@ -58,7 +56,7 @@ if (isset($_POST['id']) && !empty($_POST['id'])) {
         echo "Error: " . $conn->error;
     }
 
-    // Close connection
+    
     $conn->close();
 } else {
     echo "Please provide an Employee ID to generate payment history.";

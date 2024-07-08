@@ -4,17 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Department Management - Salary Management</title>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> <!-- W3.CSS for styling -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
     <style>
-        /* Custom styles */
+       
         .w3-content-container {
             padding: 20px;
             font-size: 20px;
             text-align: center;
-            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
-            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.8); 
             margin: 20px auto;
-            max-width: 800px; /* Adjust as needed */
+            max-width: 800px;
         }
         .w3-title {
             font-size: 30px;
@@ -40,16 +39,16 @@
 </head>
 <body>
     <div class="w3-content-container">
-        <!-- Button to open department selection dropdown -->
+       
         <button class="w3-button w3-blue add-department-button" onclick="toggleDepartmentDropdown()">Add Department</button>
 
-        <!-- Dropdown menu for department selection -->
+        
         <div id="departmentDropdown" class="w3-dropdown-content w3-bar-block w3-card-4" style="display: none;">
             <button onclick="toggleDepartmentDropdown()" class="w3-bar-item w3-button w3-hover-light-grey">Close</button>
             <button onclick="addDepartment('Human Resources')" class="w3-bar-item w3-button w3-hover-light-grey">Human Resources</button>
             <button onclick="addDepartment('Customer Service')" class="w3-bar-item w3-button w3-hover-light-grey">Customer Service</button>
             <button onclick="addDepartment('Research and Development')" class="w3-bar-item w3-button w3-hover-light-grey">Research and Development</button>
-            <!-- Add more departments as needed -->
+            
         </div>
 
         <h2>Department Data</h2>
@@ -62,7 +61,7 @@
                 </tr>
             </thead>
             <tbody id="departmentTable">
-                <!-- Existing departments -->
+                
                 <tr id="department-row-1">
                     <td>1</td>
                     <td>Finance</td>
@@ -83,13 +82,13 @@
                     <td>Sales</td>
                     <td><button class="w3-button w3-red" onclick="deleteDepartment(4)">Delete</button></td>
                 </tr>
-                <!-- Add more rows as needed -->
+               
             </tbody>
         </table>
     </div>
 
     <script>
-        let lastDepartmentId = 4; // Initial last department ID
+        let lastDepartmentId = 4; 
 
         function toggleDepartmentDropdown() {
             var dropdown = document.getElementById('departmentDropdown');
@@ -101,10 +100,10 @@
         }
 
         function addDepartment(name) {
-            // Increment the department ID
+           
             lastDepartmentId++;
 
-            // Add the department to the table
+           
             var tableBody = document.getElementById('departmentTable');
             var newRow = document.createElement('tr');
             newRow.setAttribute('id', 'department-row-' + lastDepartmentId);
@@ -115,7 +114,7 @@
             `;
             tableBody.appendChild(newRow);
 
-            // Close the dropdown after adding the department
+            
             toggleDepartmentDropdown();
         }
 
@@ -123,7 +122,7 @@
             console.log('Deleting department with ID ' + id);
             var row = document.getElementById('department-row-' + id);
             if (row) {
-                row.remove(); // Remove the row from the table
+                row.remove();
             } else {
                 console.error('Department row with ID ' + id + ' not found.');
             }

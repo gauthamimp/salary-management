@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Salary Management</title>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> <!-- W3.CSS for styling -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
     <style>
-        /* Custom styles can be added here or linked from an external stylesheet */
+        
         .w3-sidebar {
             z-index: 3;
             width: 250px;
@@ -18,24 +18,24 @@
             padding-bottom: 15px;
         }
         .w3-main {
-            margin-left: 250px; /* Adjust margin for sidebar width */
+            margin-left: 250px; 
         }
         .w3-banner-img {
             width: 100%;
             height: auto;
-            position: relative; /* Ensure container is relative for absolute positioning */
+            position: relative; 
         }
         .w3-banner-text {
             position: absolute;
-            top: 10%; /* Adjust as needed */
+            top: 10%; 
             left: 50%;
             transform: translateX(-50%);
             text-align: center;
-            color: #fff; /* Text color */
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Optional: Text shadow for better readability */
-            z-index: 1; /* Ensure text is above image */
-            width: 100%; /* Ensure text spans full width */
-            box-sizing: border-box; /* Ensure padding is included in width calculation */
+            color: #fff; 
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5); 
+            z-index: 1;
+            width: 100%; 
+            box-sizing: border-box;
         }
         .w3-content-container {
             padding: 20px;
@@ -50,7 +50,7 @@
     </style>
 </head>
 <body>
-    <!-- Sidebar/menu -->
+   
     <nav class="w3-sidebar w3-light-blue w3-collapse w3-top w3-large" id="mySidebar">
         <div class="w3-container w3-dark-grey">
             <h4>Menu</h4>
@@ -73,20 +73,20 @@
         </div>
     </nav>
 
-    <!-- Page content -->
-    <div class="w3-main" style="margin-left:250px;"> <!-- Adjust margin to match sidebar width -->
-        <!-- Title Above Banner Image -->
+   
+    <div class="w3-main" style="margin-left:250px;"> 
+        
         <div class="w3-banner-text">
             <h1 class="w3-title">Welcome to</h1>
             <h1>Salary Management System</h1>
         </div>
 
-        <!-- Banner Image -->
+       
         <div class="w3-display-container">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMAXyKYESlcAMCFjstOLyNWGUlAIka2KVwPHBRpIgmCkdf2F4pvSU4qT-JU1M7f-E2S1s&usqp=CAU" alt="Banner Image" class="w3-banner-img">
         </div>
 
-        <!-- Content -->
+        
         <div class="w3-content-container">
             <h2>Additional Content</h2>
             <p>You can add more content here as needed.</p>add
@@ -94,7 +94,7 @@
         </div>
     </div>
 
-    <!-- Optional: JavaScript for sidebar toggle -->
+   
     <script>
     function w3_open() {
         document.getElementById("mySidebar").style.display = "block";

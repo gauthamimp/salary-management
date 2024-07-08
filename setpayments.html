@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Set Payment</title>
     <style>
-        /* CSS styles */
+        
         body {
             font-family: Arial, sans-serif;
             background-color: #f2f2f2;
@@ -109,9 +109,9 @@
     </div>
 
     <script>
-        // JavaScript for form submission
+       
         function submitForm() {
-            // Fetch form data
+           
             var empid = document.getElementById("empid").value;
             var year = document.getElementById("year").value;
             var month = document.getElementById("month").value;
@@ -120,13 +120,13 @@
             var sbonus = document.getElementById("sbonus").value;
             var obonus = document.getElementById("obonus").value;
 
-            // Example of validation: Check if any field is empty
+           
             if (!empid || !year || !month || !absence || !overtime || !sbonus || !obonus) {
                 alert("Please fill out all fields");
                 return;
             }
 
-            // Example: Send data to server using fetch API
+           
             var formData = {
                 empid: empid,
                 year: year,
@@ -148,7 +148,7 @@
             .then(data => {
                 console.log('Success:', data);
                 alert('Payment set successfully');
-                // You can redirect or perform additional actions here
+               
             })
             .catch((error) => {
                 console.error('Error:', error);
